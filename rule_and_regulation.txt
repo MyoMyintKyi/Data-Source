@@ -1,0 +1,334 @@
+================================================================================
+TRAVEL COMPANY KNOWLEDGE BASE SYSTEM
+DATA EXPORT - RULES, REGULATIONS, POLICIES & COMPLIANCE
+
+Generated Date: 2026-09-27
+Environment: Production KB Ingestion
+Format: Plain Text / Key-Value Chunked
+
+DOCUMENT ID: KB-GOV-001
+CATEGORY: Government
+SUBCATEGORY: Customs and Immigration
+TITLE: Cross-Border Immigration & Visa Verification Protocol
+VERSION: 3.2
+EFFECTIVE DATE: 2026-01-01
+JURISDICTION: International / ASEAN & Schengen
+TAGS: immigration, visa, passport_validity, customs, regulatory_compliance
+
+SUMMARY:
+Mandatory standards for verifying travel document validity, machine-readable
+travel documents (MRTD), and entry visa compliance before issuing international
+boarding passes.
+
+RULES & SPECIFICATIONS:
+
+Rule ID: GOV-DOC-101
+Title: Six-Month Passport Validity Requirement
+Statement: Passengers traveling across international borders must present a
+passport valid for at least 6 months beyond the scheduled date of departure
+from the destination country, unless bilateral treaties explicitly permit
+shorter validity periods (e.g., US-Canada, EEA internal transit).
+Enforcement Level: BLOCKING_GATE
+Exceptions: Diplomatic/Official passports with explicit bilateral exemption
+letters on file.
+
+Rule ID: GOV-APIS-102
+Title: Advance Passenger Information System (APIS) Transmission
+Statement: All international passenger manifests, including full legal name,
+date of birth, nationality, gender, passport number, and expiration date, must
+be transmitted to border control authorities no later than 60 minutes prior
+to departure.
+Penalties: Carrier liability fines up to $10,000 USD per non-transmitted or
+incorrectly transmitted passenger record.
+
+COMPLIANCE CHECKLIST:
+
+Inspect physical passport for bio-page lamination integrity and watermarks.
+
+Verify machine-readable zone (MRZ) scan matches manual input data exactly.
+
+Check electronic Travel Authorization (eTA/ESTA) status via national portal.
+
+DOCUMENT ID: KB-GOV-002
+CATEGORY: Government
+SUBCATEGORY: Sanctions and Taxation
+TITLE: Sanctions Screening and Value-Added Tax (VAT) Remittance
+VERSION: 2.4
+EFFECTIVE DATE: 2025-11-15
+JURISDICTION: Global / Multi-Jurisdiction
+TAGS: ofac, un_sanctions, taxation, tourism_tax, vat
+
+SUMMARY:
+Legal obligations regarding denied party screening (OFAC, UN lists) and municipal/
+national tourism tax collection protocols.
+
+RULES & SPECIFICATIONS:
+
+Rule ID: GOV-SANC-201
+Title: Denied Party and Politically Exposed Persons (PEP) Screening
+Statement: All automated bookings processed via direct web channels or global
+distribution systems (GDS) must run automated name-matching against the UN
+Consolidated Sanctions List and OFAC Specially Designated Nationals (SDN) list
+at the time of payment authorization.
+Action on Hit: Immediate transaction hold, zero-credit freeze, and automated
+escalation to the Global Risk and Compliance team within 15 minutes.
+
+Rule ID: GOV-TAX-202
+Title: City and Tourism Tax Collection at Point of Sale
+Statement: Where municipal laws require transit or accommodation tourism taxes
+to be collected locally, the booking engine must clearly split fare components:
+base fare, statutory VAT/GST, and destination tourism tax. Destination fees
+cannot be blended into unmarked service fees.
+Disclosure Standard: Mandatory line-item display before final checkout button.
+
+DOCUMENT ID: KB-POL-001
+CATEGORY: Policies
+SUBCATEGORY: Data Protection and Privacy
+TITLE: Passenger Data Privacy, Retention, and Security Policy
+VERSION: 4.0
+EFFECTIVE DATE: 2026-02-01
+JURISDICTION: Global (GDPR, CCPA, PDPA Compliant)
+TAGS: privacy, pnr, gdpr, retention, pii_security
+
+SUMMARY:
+Internal standards governing the storage, masking, and automated purging of
+Passenger Name Records (PNR) and sensitive payment information.
+
+POLICY STATEMENTS:
+
+PII Masking & Encryption:
+All credit card numbers, payment tokens, passport bio-data, and national ID
+credentials must be encrypted in transit using TLS 1.3 and at rest using
+AES-256. Primary Account Numbers (PAN) must be masked to display only the
+last four digits across all staff-facing dashboards and invoice outputs.
+
+Data Retention & Purging:
+Passenger Name Records (PNR) and associated travel itinerary data must be
+archived from operational databases 180 days post-travel completion.
+Immutable audit logs are retained for 7 years to meet tax audit obligations,
+after which all PII is permanently scrubbed.
+
+Right to Erasure (Data Subject Requests):
+Customer requests for data erasure must be processed within 30 calendar days,
+excluding records currently under active customs investigation, tax audit
+retention holds, or pending chargeback disputes.
+
+DOCUMENT ID: KB-POL-002
+CATEGORY: Policies
+SUBCATEGORY: Accessibility and Inclusion
+TITLE: Special Assistance, Accessibility, and Service Animals Policy
+VERSION: 1.8
+EFFECTIVE DATE: 2025-08-10
+JURISDICTION: Company-wide
+TAGS: accessibility, special_assistance, wheelchair, service_animals, medical
+
+SUMMARY:
+Operational procedures ensuring equitable access and non-discriminatory service
+for passengers with disabilities and medical dependencies.
+
+POLICY STATEMENTS:
+
+Notice and Notification Requirements:
+Passengers requiring wheelchair stowage, oxygen concentrators, or specialized
+boarding assistance must lodge the request at least 48 hours prior to
+scheduled departure. Emergency assistance requests within 48 hours must be
+accommodated to the maximum extent operationally viable without delaying
+departure schedules.
+
+Service Animals:
+Recognized, certified service dogs traveling with individuals with sensory or
+physical disabilities must be accommodated in the passenger cabin/saloon
+without surcharge. Animals must remain seated at the passenger's feet and
+fitted with an approved harness at all times.
+
+Medical Clearance (MEDIF):
+Passengers requiring supplemental stretcher arrangements, continuous positive
+airway pressure (CPAP) without self-contained battery certs, or individuals
+with infectious conditions must submit a Medical Information Form (MEDIF)
+signed by a licensed physician within 10 days of travel.
+
+DOCUMENT ID: KB-TCK-001
+CATEGORY: Ticketing Policy
+SUBCATEGORY: Fare Rules and Modifications
+TITLE: Fare Classes, Modifications, and No-Show Policies
+VERSION: 5.1
+EFFECTIVE DATE: 2026-03-01
+JURISDICTION: Global Operations
+TAGS: ticketing, fare_rules, reschedule, no_show, ticket_validity
+
+SUMMARY:
+Rules regulating change fees, name corrections, reschedule windows, and no-show
+forfeiture conditions across Standard, Flexi, and Premium ticket classes.
+
+FARE CLASS MATRIX:
+
+Standard Saver (Promo)
+
+Refundable: No
+
+Reschedule Window: Allowed up to 72 hours before departure
+
+Change Fee: $25.00 USD + Fare difference
+
+Name Correction: Typo correction up to 3 characters only (Free within 24h of
+purchase, $15 USD thereafter)
+
+No-Show Settlement: 100% fare forfeited; statutory taxes refundable upon
+written request within 30 days.
+
+Flexi Standard
+
+Refundable: Yes
+
+Reschedule Window: Allowed up to 12 hours before departure
+
+Change Fee: $0.00 USD (Fare difference applies)
+
+Name Correction: Full legal name update permitted with valid government
+identity documentation up to 24 hours prior to travel for a $20 USD fee.
+
+No-Show Settlement: 50% fare credit voucher valid for 12 months.
+
+Executive / Business
+
+Refundable: Yes
+
+Reschedule Window: Anytime up to 1 hour post-departure
+
+Change Fee: $0.00 USD (Fare difference applies)
+
+Name Correction: Complimentary
+
+No-Show Settlement: Complimentary rebooking on next scheduled service or
+100% refund as travel credits.
+
+GENERAL TICKET VALIDITY:
+
+Unused open-dated tickets remain valid for redemption for 365 calendar days
+from original issue date.
+
+Tickets cannot be transferred to a third party once check-in has been
+completed or after any leg of a multi-leg journey has commenced.
+
+DOCUMENT ID: KB-TCK-002
+CATEGORY: Ticketing Policy
+SUBCATEGORY: Cancellations and Refunds
+TITLE: Disruption Management, Involuntary Refunds, and Denied Boarding
+VERSION: 3.0
+EFFECTIVE DATE: 2026-01-15
+JURISDICTION: Company-wide
+TAGS: refunds, cancellations, schedule_change, denied_boarding, compensation
+
+SUMMARY:
+Procedures for processing voluntary and involuntary ticket refunds, force
+majeure events, and denied boarding compensations.
+
+INVOLUNTARY DISRUPTIONS:
+
+Schedule Cancellation or Carrier Delay > 180 Minutes:
+Passenger may select:
+(a) 100% cash refund to original payment method within 7 business days, or
+(b) Re-routing to destination at earliest opportunity at no extra cost,
+including meal vouchers if wait time exceeds 2 hours.
+
+Overbooking / Involuntary Denied Boarding:
+Immediate cash compensation of 200% of the affected segment fare (minimum
+$100 USD) plus rebooking on next available service or full refund, alongside
+complimentary accommodation if an overnight stay is necessary.
+
+VOLUNTARY REFUNDS:
+
+Refunds must be remitted back solely to the original method of payment
+(credit card, bank transfer, or corporate billing account).
+
+Third-party booking agency tickets must be refunded via the issuing Global
+Distribution System (GDS) or Online Travel Agency (OTA) portal.
+
+DOCUMENT ID: KB-REG-001
+CATEGORY: Rule and Regulations
+SUBCATEGORY: Passenger Conduct and Safety
+TITLE: Passenger Code of Conduct and Zero-Tolerance Disruptive Behavior
+VERSION: 2.1
+EFFECTIVE DATE: 2025-09-01
+JURISDICTION: All Vehicles, Vessels, Terminals, and Aircraft
+TAGS: conduct, safety, refusal_of_carriage, intoxication, passenger_rights
+
+SUMMARY:
+Standards of conduct required of passengers on company premises, vehicles, and
+vessels, including grounds for refusal of carriage.
+
+PROHIBITED ACTIONS:
+
+Verbal abuse, intimidation, harassment, or physical assault directed against
+crew, terminal staff, or fellow passengers.
+
+Consumption of personal alcoholic beverages onboard vehicles or vessels
+outside licensed dining areas.
+
+Tampering with smoke detectors, emergency exits, life rafts, or navigation
+equipment.
+
+Operating unauthorized electronic equipment or radio communications devices
+in violation of safety instructions.
+
+ESCALATION AND SANCTIONS:
+
+Level 1 (Verbal non-compliance):
+Formal verbal warning issued by Lead Crew / Conductor.
+
+Level 2 (Persistent insubordination or intoxication):
+Immediate denial of boarding or removal at the next scheduled stop. Full
+forfeiture of ticket without refund.
+
+Level 3 (Physical safety threat or assault):
+Physical restraint if authorized by vehicle/vessel commander, handover to
+local law enforcement, and placement on the internal Carrier Exclusion
+List (blacklist) for a minimum of 24 months.
+
+DOCUMENT ID: KB-REG-002
+CATEGORY: Rule and Regulations
+SUBCATEGORY: Baggage and Cargo
+TITLE: Baggage Allowances, Dangerous Goods, and Lost Property Regulations
+VERSION: 3.5
+EFFECTIVE DATE: 2026-04-01
+JURISDICTION: Company-wide
+TAGS: baggage, dangerous_goods, lithium_batteries, liability_limits, lost_property
+
+SUMMARY:
+Allowances, restrictions on hazardous materials, and carrier liability
+limitations for damaged or delayed luggage.
+
+BAGGAGE ALLOWANCES:
+
+Cabin Carry-On: 1 item max 7 kg (15 lbs), dimensions not exceeding
+56 x 36 x 23 cm, plus 1 small personal item (handbag or laptop sleeve).
+
+Checked Standard: 1 item up to 20 kg (44 lbs), linear dimensions (L+W+H)
+not exceeding 158 cm.
+
+Excess Weight Surcharge: Flat fee of $12.00 USD per kilogram exceeding limit.
+
+HAZARDOUS AND DANGEROUS GOODS:
+
+Lithium-ion Batteries (>100Wh up to 160Wh):
+Permitted in carry-on baggage only with prior carrier approval (maximum 2
+spare batteries per traveler). Strictly prohibited in checked baggage.
+
+E-cigarettes and Vaping Devices:
+Must remain in carry-on luggage; use or charging onboard vehicles, aircraft,
+or vessels is strictly forbidden under all circumstances.
+
+Flammable Liquids & Compressed Gases:
+Completely prohibited from carriage in both cabin and cargo holds.
+
+CARRIER LIABILITY:
+
+International Travel: Governed by the Montreal Convention (limit of 1,288
+Special Drawing Rights [SDR] per passenger for damaged or delayed luggage).
+
+Claims Notice Window: Written notification must be lodged within 7 days for
+damaged baggage, and within 21 days for delayed baggage from the date the item
+was placed at the passenger's disposal.
+================================================================================
+END OF FILE
+================================================================================
