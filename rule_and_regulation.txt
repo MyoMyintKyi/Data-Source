@@ -329,6 +329,12 @@ Special Drawing Rights [SDR] per passenger for damaged or delayed luggage).
 Claims Notice Window: Written notification must be lodged within 7 days for
 damaged baggage, and within 21 days for delayed baggage from the date the item
 was placed at the passenger's disposal.
+
+Goods purchased under the Japanese tourist consumption tax exemption (10%) are subject 
+to strict consumption rules:
+- Consumable goods (food, cosmetics, liquor) are sealed in tamper-evident plastic bags.
+- The seal must NOT be broken while inside Japan. Breaking the seal subjects the traveler 
+  to repayment of the 10% consumption tax at customs upon exit.
 ================================================================================
 END OF FILE
 ================================================================================
